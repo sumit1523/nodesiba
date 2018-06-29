@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Add Books</title>
+</head>
+<body>
+<div class='centered'>
+    <h2>Fill the Book details to Add a new Book</h2>
+    <form action="/adminProfile/add-book" method='post'>
+        <table>
+           <tr>
+               <td><label>Book Name : </label></td>
+               <td><label><input type='text' name='title' /> </label></td>
+           </tr>
+           <tr>
+               <td><label>Author : </label></td>
+               <td><label><input type="text" name = 'author' /></label></td>
+           </tr>
+           <tr>
+                <td><label>Category : </label></td>
+                <td><label><input type="text" name = 'category' /></label></td>
+            </tr>
+               
+            <tr>
+                <td></td>
+                <td><br/><input type='submit' value='Add' /></td>
+            </tr>
+        </table>
+    </form>
+</div> 
+</body>
+</html>

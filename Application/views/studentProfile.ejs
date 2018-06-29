@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Student Profile</title>
+</head>
+<body>
+    <div class='centered'>
+            <% if(success_msg!=''){ %>
+                <h2 id='successmsg' style='color: blue'><%= success_msg %></h2>
+            <%}%>
+                <P> Below are the books you have issued</P>
+            <table class='booktable'>
+                <tr class='sec'>
+                    <th class='sec'>Book ID</th>
+                    <th class='sec'>Book Name</th>
+                    <th class='sec'>Author</th>
+                </tr>
+                <% list.forEach(function(item){ %>
+                    <tr class='sec'>
+                            <td class='sec'><%= item.ID %></td>
+                            <td class='sec'><%= item.book_Name %></td>
+                            <td class='sec'><%= item.author %></td>
+                    </tr>
+                <%  }) %>
+                    
+                <tr><td><br/></td></tr>
+                <tr>
+                    <td><input type='button' value='Issue Book'/></td>
+                    <td><input type='button' value='Return Book'/></td>
+                </tr>
+            </table>
+                
+    </div>
+    
+</body>
+</html>
