@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/style.css' />
+    <title>Admin</title>
+</head>
+<body>
+    <div class='centered'>
+            <% if(msg!=''){ %>
+                <div id='successmsg' style='color: blue'><%= msg %></div>
+            <%}%>
+   
+            <h1>Welcome to the Library</h1>
+    <table class='booktable' >
+        <tr class='sec'>
+            <th class='sec'>Book Name</th>
+            <th class='sec'>Author</th>
+            <th class='sec'>Category</th>
+        </th>
+        <% bookList.forEach(function(book){ %>
+
+            <tr class='sec'>
+                <td class='sec'><%= book.title %></td>
+                <td class='sec'><%= book.author %></td>
+                <td class='sec'><%= book.category %></td>
+        <% }) %>
+    </table>
+
+    <table>
+        <tr>
+            <td><br/><br/></td>
+        </tr>  
+        <tr>
+            <td><form action="/add"><input type='submit' value='Add Book'/></form></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

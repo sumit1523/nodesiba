@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Admin</title>
+</head>
+<body>
+    <div class='centered'>
+            <% if(success_msg!=''){ %>
+                <div id='successmsg' style='color: blue'><%= success_msg %></div>
+            <%}%>
+    <table>
+        <tr><td>
+            <h1>Welcome <%= user.name %></h1></td>
+        <td>
+                <form action="/adminProfile/logout">
+                    <button style="background-color :blue">Logout</button>
+                </form>
+            
+        </td></tr>
+    </table>
+    <table class='booktable' >
+        <tr class='sec'>
+            <th class='sec'>Book Name</th>
+            <th class='sec'>Author</th>
+            <th class='sec'>Category</th>
+        </th>
+        <% bookList.forEach(function(book){ %>
+
+            <tr class='sec'>
+                <td class='sec'><%= book.title %></td>
+                <td class='sec'><%= book.author %></td>
+                <td class='sec'><%= book.category %></td>
+        <% }) %>
+    </table>
+
+    <table>
+        <tr>
+            <td><br/><br/></td>
+        </tr>  
+        <tr>
+            <td><form action="/pages/addBookPage.html"><input type='submit' value='Add Book'/></form></td>
+            <td><form action="/pages/deletebook.html"><input type='submit' value='Delete Book'/></form></td>
+            <td><form action="/pages/editid.html"><input type='submit' value='Edit Book'/></form></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Subscription Form</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src='/routes/subscribe.js'></script>
+  </head>
+  <body>
+    <h1>DTH Subscription</h1><br/>
+    <form action='/subscribe/submit' method='post'>
+        <table>
+            <tr>
+                <td><lebel>Customer Subscription Id:</lebel></td>
+                <td><input type='text' name='csid' ></td>
+            </tr>
+    
+            <tr>
+                <td><label>Channels :</label></td>
+                <td><select name='channel'>
+                        <option >Select</option>
+                        <% for(var i=0; i<cd.length; i++)
+                            {
+                        %>
+                          <option value="<%= cd[i].channel_id %>"><%= cd[i].channel_name %></option>
+ 
+                        <% }%>
+        
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                    <td><lebel>Date of Subscription:</lebel></td>
+                    <td><input type='date' name='datee' ></td>
+                </tr>
+         </table>
+        <input type='submit' value='Subscribe'>
+    </form>
+    <form method="get" action="subscribe/clear">
+        <button type="submit">Clear</button>
+    </form>
+    
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>User Subscription Details</h1><br/>
+   <div style='width: 300px;
+   border: 2px solid black;
+   padding: 25px;
+   margin: 25px;'>
+        <p>Subscription Id : <%= subscriptionID %></p>
+        <p>Total Subscription Cost : <%=sum %></p> 
+        <p>Channels Subscribed for :<p>
+        
+    <table border="1">    
+        <tr>
+            <th>Channel Name</th>
+            <th>Cost per month</th>
+        </tr>
+        <%for(var i=0;i<channelAndCost.length;i++){ %>
+            <tr>
+                <td>
+                    <%=channelAndCost[i].channel_name%>
+                </td>
+                <td>
+                        <%=channelAndCost[i].cost_per_month%>
+                </td>
+            </tr>
+        <%}%>
+
+    </table>
+    
+   <div> 
+  </body>
+</html>

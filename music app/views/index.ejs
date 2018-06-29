@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+  </head>
+  <body>
+      
+      <h3 style="text-align:center; color:red"> <%= typeof message!='undefined' ? message.message1 : '' %> </h3>
+    <h1 style="text-align:center;">Welcome to music application</h1>
+    <a href="/addSongs" class="btn btn-info">Add Songs</a><br/><br/>
+    <a href="/csPlaylist" class="btn btn-info">Create playlist</a>
+  </body>
+</html>

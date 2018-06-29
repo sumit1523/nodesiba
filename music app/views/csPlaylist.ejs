@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Songs List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    
+    <script type="text/javascript"  src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript"  src="/javascripts/createPlaylist.js" ></script>
+  </head>
+  <body>
+        
+        <div class="row">
+            <div class="col-md-6" >
+                <div >   
+                    <h1 style="text-align:center;">Songs List</h1>
+                    <table class="table">
+                        <tr>
+                            <th></td>
+                            <th>Title</th> 
+                            <th>Artist</thtd>
+                            <th>Duration</th>
+                        </tr>
+                    
+                            <%data.results.forEach(function(item) { %>
+                            <tr>
+                                <td><input type="checkbox" name="check_<%= item._id %>" value="<%= item._id %>" id="check_<%= item._id %>"> </td>
+                                <td> <%= item.songname %></td>
+                                <td> <%= item.artist %></td>
+                                <td> <%= item.duration %></td>
+                            </tr>
+                            <% }) %>   
+                    
+                    </table>
+                </div>
+                
+            </div> 
+            <div class="col-md-6" >
+                    <div >   
+                            <h1 style="text-align:center;">Playlist List</h1>
+                            <table class="table">
+                                <tr>
+                                    <th>Playlist name</th> 
+                                    <th>Songs</th>
+                                </tr>
+                            
+                                    <% data.playlistWithSongs.forEach(function(item) { %>
+                                    <tr>
+                                        <td> <%= item.playlistname %></td>
+                                        <td> 
+                                            <% item.PlaylistSongs.forEach(function(songs) { %>
+                                            <%= songs.songname+"," %>
+                                            <% }) %>
+                                        </td>
+                                    </tr>
+                                    <% }) %>   
+                            
+                            </table>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-5">Please enter Playlist Name</div>
+                            <div class="col-md-5"><input type="text" name="PlayListName" id="PlayListName"></div><br/>
+                            <div class="col-md-5"><a href="" class="btn btn-info" onclick="CreatePlayList" id="CreatePlayList">Create PlayList</a></div>
+                        </div>
+            </div>
+            
+
+        </div>
+   
+  </body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "name": "application",
+  "version": "1.0.0",
+  "description": "Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "app-root-path": "^2.0.1",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "*",
+    "cors": "*",
+    "ejs": "^2.6.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.2.0",
+    "flash": "^1.1.0",
+    "jsonwebtoken": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "mysql": "^2.15.0",
+    "nodemon": "^1.17.5",
+    "passport": "^0.3.2",
+    "passport-http": "*",
+    "passport-jwt": "*",
+    "passport-local": "*",
+    "winston": "^2.4.2"
+  },
+  "author": "Sibajee Ray",
+  "license": "ISC"
+}

@@ -1,0 +1,1 @@
+ console.log('Current Directory is :'+__dirname);

@@ -1,0 +1,23 @@
+{
+  "name": "auth-pass-jwt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies" :{
+    "bycryptjs" : "*",
+    "body-parser" : "*",
+    "cors" : "*",
+    "express" : "*",
+    "jsonwebtoken" : "*",
+    "mongoose" : "*",
+    "morgan" : "*",
+    "passport" : "^0.3.2",
+    "passport-jwt" : "*"
+  },
+  "author": "Sibajee Ray",
+  "license": "ISC"
+}

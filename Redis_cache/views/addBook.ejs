@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/style.css' />
+    <title>Add Books</title>
+</head>
+<body>
+<div class='centered'>
+        <% if(msg!=''){ %>
+            <div id='successmsg' style='color: blue'><%= msg %></div>
+        <%}%>
+    <table>
+        <tr>
+            <td>Fill the Book details to Add a new Book  </td>
+            <td><form action='add-db' method='post'><input style='color:green' type='submit' value='Save All Book from Cache to DB'></form></td>
+        </tr>
+    </table>
+    <form action="/add-cache" method='post'>
+        <table>
+           <tr>
+               <td><label>Book Name : </label></td>
+               <td><label><input type='text' name='title' /> </label></td>
+           </tr>
+           <tr>
+               <td><label>Author : </label></td>
+               <td><label><input type="text" name = 'author' /></label></td>
+           </tr>
+           <tr>
+                <td><label>Category : </label></td>
+                <td><label><input type="text" name = 'category' /></label></td>
+            </tr>
+            <tr><td></td><td><br/></br><input type='submit' value='Add Book To Cache' /></td></tr>
+        </table>
+    </form>
+</div> 
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class='centered'>
+        <% if(success_msg!=''){ %>
+          <div id='successmsg' style='color: green'><%= success_msg %></div>
+          <%}%>
+    <h1>Welcome to the APP</h1>
+    <h3>Please Login to continue</h3><br/>
+      <table><tr>
+       <td> <form action='/login/admin'> <button>Admin Login</button></form></td>
+       <td> <form action='/login/student' > <button>Student Login</button></form></td>
+      </tr></table>
+    <p></p>
+    </div>
+  </body>
+</html>

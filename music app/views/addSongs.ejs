@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Songs</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+  </head>
+  <body>
+    <h1 style="text-align:center;">Add songs to list</h1><br/>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-8">
+            <form action="/addSongs/addsongstolist" method="post">
+                <div class="row">
+                    <div class="col-md-2">Song Tittle:</div>
+                    <div class="col-md-4">
+                        <input type="text" id="songname" name="songname">
+                    </div>
+                </div>
+                <br>  
+                <div class="row">
+                    <div class="col-md-2">Artist:</div>
+                    <div class="col-md-4">
+                        <input type="text" id="artist" name="artist">
+                    </div>
+                </div>
+                <br> 
+                <div class="row">
+                    <div class="col-md-2">Location:</div>
+                    <div class="col-md-4">
+                        <input type="text" id="location" name="location">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2">Albumb:</div>
+                    <div class="col-md-4">
+                        <input type="text" id="albumb" name="albumb">
+                    </div>
+                </div>
+                <br> 
+                <div class="row">
+                    <div class="col-md-2">Duration:</div>
+                    <div class="col-md-4">
+                        <input type="text" id="duration" name="duration">
+                    </div>
+                </div>
+                <br>  
+                <div class="row">
+                    <div class="col-md-2">Tag:</div>
+                    <div class="col-md-4">
+                        <input type="text" id="tag" name="tag">
+                    </div>
+                </div>
+                <br> 
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-4">
+                        <input type="submit" value="Add Song" class="btn btn-info">
+                    </div>
+                </div>
+                <br>  
+            </form>
+        </div>
+   
+    
+  </body>
+</html>

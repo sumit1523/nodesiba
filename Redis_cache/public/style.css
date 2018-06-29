@@ -1,0 +1,26 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  
+  .centered {
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    font-size: 20px;
+    padding: 5px;
+    z-index: 100;
+  }
+  
+  a {
+    color: #00B7FF;
+  }
+  
+  .booktable {
+    border-collapse: collapse;
+  }
+  
+  .sec {
+    border: 1px solid black;
+  }

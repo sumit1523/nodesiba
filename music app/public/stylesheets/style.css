@@ -1,0 +1,21 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+ th {
+   background-color: #8B8BA9;
+
+}
+
+.scroll-area{
+  width:100%;
+  height:calc(100% - 200px);
+  margin-top:0px;
+  float:left;
+  overflow-y:scroll;
+}
